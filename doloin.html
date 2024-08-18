@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db; /* Example background color */
+            margin: 20px;
+            float: left;
+            transition: filter 0.3s ease-in-out; /* Smooth transition for demo */
+        }
+    </style>
+    <title>Hue Rotation Example</title>
+</head>
+<body>
+    <div class="square"></div>
+
+    <script>
+        // JavaScript to add hue rotation effect on click (just for demonstration)
+        const square = document.querySelector('.square');
+        let rotationAngle = 0;
+
+        square.addEventListener('click', () => {
+            rotationAngle += 36;
+            square.style.filter = `hue-rotate(${rotationAngle}deg)`;
+        });
+    </script>
+</body>
+</html>
